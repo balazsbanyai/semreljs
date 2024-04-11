@@ -1,0 +1,29 @@
+{
+  "name": "semreljs",
+  "version": "1.0.0",
+  "description": "In order to compile the project you need to create a file that contains the secret API key of the log upload service. You need to create an SRE ticket to receive it.",
+  "main": ".commitlint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:balazsbanyai/semreljs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balazsbanyai/semreljs/issues"
+  },
+  "homepage": "https://github.com/balazsbanyai/semreljs/blob/main/README.md",
+  "release": {
+    "branches": ["main"],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
+  }
+  
+
+}
