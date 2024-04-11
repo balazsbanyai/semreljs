@@ -1,6 +1,25 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    `maven-publish`
+}
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.my-company"
+            artifactId = "my-library"
+            version = "1.0"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
+
+    repositories {
+        mavenLocal()
+    }
 }
 
 android {
