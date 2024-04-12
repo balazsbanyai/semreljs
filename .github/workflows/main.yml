@@ -34,6 +34,12 @@ jobs:
               run: npm i gradle-semantic-release-plugin
             - name: "run semrel"
               run: npx semantic-release
+            - uses: actions/upload-artifact@v4
+              name: "upload maven local for debugging"
+              with:
+                name: maven-local
+                path: ~/.m2/repository
+                retention-days: 7
 
             # - uses: gradle/gradle-build-action@v2.4.2
             #   name: Run tests
