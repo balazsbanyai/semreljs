@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/balazsbanyai/semreljs/blob/main/README.md",
   "release": {
-    "branches": ["main"],
+    "branches": ["*"],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
