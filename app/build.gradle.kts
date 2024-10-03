@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
+// add feature
 
 android {
     namespace = "com.cmtelematics.semantix"

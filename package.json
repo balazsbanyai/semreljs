@@ -17,11 +17,14 @@
   },
   "homepage": "https://github.com/balazsbanyai/semreljs/blob/main/README.md",
   "release": {
-    "branches": ["*"],
+    "branches": [
+      "main",
+      { "name" : "pre/rc", "channel" : "pre/rc", "prerelease": "rc" },
+      { "name" : "feature/*", "prerelease": "SNAPSHOT" }
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      "@semantic-release/github",
       [
         "@semantic-release/exec",
         {
